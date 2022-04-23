@@ -18,7 +18,7 @@ Add the package to your dependencies:
 
 ```yaml
 dependencies:
-  speed_test_port: ^1.0.0
+  speed_test_port: ^1.0.3
 ```
 
 OR:
