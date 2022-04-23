@@ -1,6 +1,6 @@
 name: speed_test_port
 description: Internet speed tester (ping, upload, download) using speedtest.net
-version: 1.0.0
+version: 1.0.2
 homepage: https://github.com/oiuldashov/speed_test_port
 repository: https://github.com/oiuldashov/speed_test_port
 
