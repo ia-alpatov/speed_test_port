@@ -1,5 +1,5 @@
 <div>
-  <h1 align="center">speed_test</h1>
+  <h1 align="center">speed_test_port</h1>
   <p align="center" >
     <a title="Pub" href="https://pub.dartlang.org/packages/speed_test_port" >
       <img src="https://img.shields.io/pub/v/speed_test_port.svg?style=popout&include_prereleases" />
@@ -10,7 +10,7 @@
   </p>
 </div>
 
-Port of [SpeedTest.Net](https://github.com/hasali19/SpeedTest.Net) to dart
+Port of [SpeedTest.Net](https://github.com/hasali19/SpeedTest.Net) to Dart
 
 ## Installation
 
