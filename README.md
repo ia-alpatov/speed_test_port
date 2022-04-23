@@ -33,3 +33,38 @@ dependencies:
 Finally, run `dart pub get` to download the package.
 
 Projects using this library should use the stable channel of Flutter
+
+
+
+## Example of usage
+```dart
+    
+    //Getting closest servers
+    var settings = await GetSettings();
+    
+    var servers = settings.servers;
+    
+    //Test latency for each server
+    for (var server in servers) {
+      server.Latency = await TestServerLatency(server, 3);
+    }
+    
+    //Getting best server
+    servers.sort((a, b) => a.Latency.compareTo(b.Latency));
+    var bestServer = servers.first;
+    
+    //Test download speed in MB/s
+    var downloadSpeed = await TestDownloadSpeed(
+        bestServer,
+        settings.download.ThreadsPerUrl == 0
+            ? 2
+            : settings.download.ThreadsPerUrl,
+        3);
+        
+    //Test upload speed in MB/s
+    var uploadSpeed = await TestUploadSpeed(
+        bestServer,
+        settings.upload.ThreadsPerUrl == 0 ? 2 : settings.upload.ThreadsPerUrl,
+        3);
+
+```
