@@ -20,7 +20,7 @@ class SpeedTestPortStream {
     if (!doc.hasChild('settings')) throw Exception("Can't get settings from settings xml");
 
     final settings = Settings.fromXMLElement(
-      doc!.getElement('settings')!,
+      doc.getElement('settings')!,
     );
 
     var serversConfig = ServersList(<Server>[]);
@@ -61,8 +61,6 @@ class SpeedTestPortStream {
     int retryCount = 2,
     int timeoutInSeconds = 2,
   }) async* {
-    List<Server> serversToTest = [];
-
     for (final server in servers) {
       final latencyUri = createTestUrl(server, 'latency.txt');
       final stopwatch = Stopwatch();
