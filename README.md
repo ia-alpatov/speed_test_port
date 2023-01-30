@@ -34,6 +34,9 @@ Finally, run `dart pub get` to download the package.
 
 Projects using this library should use the stable channel of Flutter
 
+## Example of usage for Stream version
+### Example version in "example" folder
+![Streams example](./readme_media/example.gif)
 
 
 ## Example of usage for Future version
@@ -67,6 +70,3 @@ Projects using this library should use the stable channel of Flutter
     final uploadRate = await tester.testUploadSpeed(servers: bestServersList);
 ```
 
-## Example of usage for Stream version
-### Example version in "example" folder
-![](https://github.com/oiuldashov/speed_test_port/readme_media/example.gif)
