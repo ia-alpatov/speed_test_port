@@ -1,4 +1,10 @@
-## 1.0.1
+## 1.0.4
+
+* Refactoring
+* Added *Stream* version of library
+* Added example app
+
+## 1.0.2
 
 * Fix example of usage
 

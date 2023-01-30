@@ -1,18 +1,18 @@
 name: speed_test_port
 description: Internet speed tester (ping, upload, download) using speedtest.net
-version: 1.0.3
+version: 1.0.4+1
 homepage: https://github.com/oiuldashov/speed_test_port
 repository: https://github.com/oiuldashov/speed_test_port
 
 environment:
-  sdk: '>=2.15.0 <3.0.0'
-
-dev_dependencies:
-  lints: ^1.0.0
-  test: ^1.16.0
+  sdk: '>=2.17.0 <3.0.0'
 
 dependencies: 
   sync: ^0.3.0
   xml_parser: ^1.0.0
   http: ^0.13.4
+
+dev_dependencies:
+  very_good_analysis: ^3.0.1
+
 
