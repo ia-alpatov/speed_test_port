@@ -36,36 +36,37 @@ Projects using this library should use the stable channel of Flutter
 
 
 
-## Example of usage
+## Example of usage for Future version
 ```dart
-    SpeedTest tester = SpeedTest();
+    // Create a tester instance
+    SpeedTestPort tester = SpeedTestPort();
 
-    //Getting closest servers
-    var settings = await tester.GetSettings();
-    
-    var servers = settings.servers;
-    
-    //Test latency for each server
-    for (var server in servers) {
-      server.Latency = await tester.TestServerLatency(server, 3);
+    // And a variable to store the best servers
+    List<Server> bestServersList = [];
+
+    // Example function to set the best servers, could be called
+    // in an initState()
+    Future<void> setBestServers() async {
+      final settings = await tester.getSettings();
+      final servers = settings.servers;
+
+      final _bestServersList = await tester.getBestServers(
+        servers: servers,
+      );
+
+      setState(() {
+        bestServersList = _bestServersList;
+      });
     }
-    
-    //Getting best server
-    servers.sort((a, b) => a.Latency.compareTo(b.Latency));
-    var bestServer = servers.first;
-    
-    //Test download speed in MB/s
-    var downloadSpeed = await tester.TestDownloadSpeed(
-        bestServer,
-        settings.download.ThreadsPerUrl == 0
-            ? 2
-            : settings.download.ThreadsPerUrl,
-        3);
-        
-    //Test upload speed in MB/s
-    var uploadSpeed = await tester.TestUploadSpeed(
-        bestServer,
-        settings.upload.ThreadsPerUrl == 0 ? 2 : settings.upload.ThreadsPerUrl,
-        3);
 
+    //Test download speed in MB/s
+    final downloadRate =
+        await tester.testDownloadSpeed(servers: bestServersList);
+
+    //Test upload speed in MB/s
+    final uploadRate = await tester.testUploadSpeed(servers: bestServersList);
 ```
+
+## Example of usage for Stream version
+### Example version in "example" folder
+![](https://github.com/oiuldashov/speed_test_port/readme_media/example.gif)
