@@ -25,7 +25,7 @@ OR:
 
 ```yaml
 dependencies:
-  fluent_ui:
+  speed_test_port:
     git: https://github.com/oiuldashov/speed_test_port.git
 ```
 
@@ -37,7 +37,10 @@ Projects using this library should use the stable channel of Flutter
 ## Example of usage for Stream version
 
 ### Example version in "example" folder (Stream version)
-![Streams example](./readme_media/example.gif)
+
+[Link to code](https://github.com/oiuldashov/speed_test_port/blob/main/example/lib/main.dart#L46)
+
+![Streams example gif](./readme_media/example.gif)
 
 
 ### Example of usage for Future version
