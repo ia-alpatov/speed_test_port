@@ -35,11 +35,12 @@ Finally, run `dart pub get` to download the package.
 Projects using this library should use the stable channel of Flutter
 
 ## Example of usage for Stream version
-### Example version in "example" folder
+
+### Example version in "example" folder (Stream version)
 ![Streams example](./readme_media/example.gif)
 
 
-## Example of usage for Future version
+### Example of usage for Future version
 ```dart
     // Create a tester instance
     SpeedTestPort tester = SpeedTestPort();
