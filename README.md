@@ -26,7 +26,7 @@ OR:
 ```yaml
 dependencies:
   speed_test_port:
-    git: https://github.com/oiuldashov/speed_test_port.git
+    git: https://github.com/ia-alpatov/speed_test_port.git
 ```
 
 
